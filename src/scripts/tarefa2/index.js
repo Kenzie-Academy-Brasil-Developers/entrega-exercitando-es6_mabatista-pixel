@@ -1,7 +1,6 @@
 const getTaskDescriptions = ((taskList) =>{
-    const taskDescriptions = [];
-    
-     taskList.forEach((element) => taskDescriptions.push(element.description) )
+  
+   const taskDescriptions = taskList.map((element) => element.description )
 
    return taskDescriptions;
 } )

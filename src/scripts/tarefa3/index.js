@@ -37,10 +37,10 @@ const calculateAverageRating = ((bookList, bookId) => {
     
     const book = bookList.filter(book => book.id == bookId)
     
-    if(book === null || book === undefined || book === 0){
+    if(!book || bookId > bookList.length){
         return 'Livro não encontrado'
     }
-
+ 
     if(book[0].ratings == 0){
         return `O livro ${book[0].title} não possui nenhuma avaliação.`
     }
